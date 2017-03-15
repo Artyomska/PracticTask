@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fisapost.controller.LoginController">
+   <children>
+      <Label layoutX="143.0" layoutY="61.0" text="Username" />
+      <Label layoutX="145.0" layoutY="98.0" text="Password" />
+      <TextField fx:id="user" layoutX="218.0" layoutY="56.0" />
+      <Button fx:id="loginButton" layoutX="218.0" layoutY="139.0" mnemonicParsing="false" text="Login" />
+      <PasswordField fx:id="password" layoutX="218.0" layoutY="93.0" />
+      <Button fx:id="registerButton" layoutX="289.0" layoutY="139.0" mnemonicParsing="false" onAction="#registerUser" text="Register" />
+      <Button fx:id="modificaButton" layoutX="221.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleModifica" prefHeight="31.0" prefWidth="237.0" text="Modifica permisiunea user-ului dat" />
+      <TextField fx:id="modUser" layoutX="221.0" layoutY="224.0" />
+      <Label fx:id="l1" layoutX="153.0" layoutY="229.0" text="User-ul" />
+      <TextField fx:id="permis" layoutX="221.0" layoutY="267.0" />
+      <Label fx:id="l2" layoutX="120.0" layoutY="272.0" text="Permisiunea" />
+      <ToggleButton fx:id="menuButton" layoutX="218.0" layoutY="185.0" mnemonicParsing="false" onAction="#handleMenu" text="Meniu modificare a permisiunilor" />
+   </children>
+</AnchorPane>

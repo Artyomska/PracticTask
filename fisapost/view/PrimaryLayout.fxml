@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="452.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fisapost.controller.AllController">
+   <children>
+      <ComboBox fx:id="ComboObject" layoutX="359.0" layoutY="18.0" onAction="#onActionComboBox" prefHeight="42.0" prefWidth="245.0" promptText="ComboBox" />
+		
+		<Pagination fx:id="paginationS" layoutX="359.0" layoutY="66.0" prefHeight="293.0" prefWidth="245.0" />
+		<Pagination fx:id="paginationP" layoutX="359.0" layoutY="66.0" prefHeight="293.0" prefWidth="245.0" />
+		<Pagination fx:id="paginationEF" layoutX="359.0" layoutY="66.0" prefHeight="293.0" prefWidth="245.0" />
+		
+	            <TableView fx:id="tableP" layoutX="359.0" layoutY="66.0" prefHeight="293.0" prefWidth="245.0">
+	                <columns>
+	                    <TableColumn fx:id="pFirstColumn" text="Nume"> </TableColumn>
+	                    <TableColumn fx:id="pSecondColumn" text="Tip">  </TableColumn>
+	                </columns>
+	            <columnResizePolicy>
+            		<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         		</columnResizePolicy>
+	            </TableView>
+    
+	            <TableView fx:id="tableS" layoutX="359.0" layoutY="66.0" prefHeight="293.0" prefWidth="245.0">
+	                <columns>
+	                    <TableColumn fx:id="sFirstColumn" text="Id">  </TableColumn>
+	                    <TableColumn fx:id="sSecondColumn" text="Descriere">  </TableColumn>
+	                </columns>
+	            <columnResizePolicy>
+            		<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         		</columnResizePolicy>
+	            </TableView>
+    
+
+	            <TableView fx:id="tableEF" layoutX="359.0" layoutY="66.0" prefHeight="293.0" prefWidth="245.0">
+	                <columns>
+	                    <TableColumn fx:id="fFirstColumn" text="Post">  </TableColumn>
+	                    <TableColumn fx:id="fSecondColumn" text="Sarcina">  </TableColumn>
+	                </columns>
+	            <columnResizePolicy>
+            		<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         		</columnResizePolicy>
+	            </TableView>
+
+      
+      
+      
+      <Button fx:id="addButton" layoutX="18.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="34.0" prefWidth="77.0" text="Add" />
+      <TextField fx:id="firstTextField" layoutX="133.0" layoutY="13.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="secondTextField" layoutX="133.0" layoutY="58.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="thirdTextField" layoutX="133.0" layoutY="108.0" prefHeight="25.0" prefWidth="177.0" />
+      <Label fx:id="firstLabel" layoutX="21.0" layoutY="18.0" text="ID/Nr. Rapoarte: " />
+      <Label fx:id="secondLabel" layoutX="21.0" layoutY="63.0" text="Desc: " />
+      <Label fx:id="thirdLabel" layoutX="21.0" layoutY="113.0" text="N/A: " />
+      <Button fx:id="updateButton" layoutX="106.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="34.0" prefWidth="77.0" text="Update" />
+      <Button fx:id="deleteButton" layoutX="18.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="34.0" prefWidth="77.0" text="Delete" />
+      <Button fx:id="clearFieldsButton" layoutX="106.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleClearFields" prefHeight="34.0" prefWidth="103.0" text="Clear Fields" />
+      <Pane layoutX="14.0" layoutY="261.0" prefHeight="91.0" prefWidth="282.0" style="-fx-background-color: LIGHTGRAY; -fx-background-radius: 3.5;">
+         <children>
+            <Label layoutY="19.0" text="Filtru (input):" />
+            <TextField fx:id="filterTextField" layoutX="89.0" layoutY="15.0" onKeyReleased="#handleFilterColumn" prefHeight="25.0" prefWidth="177.0" />
+            <RadioButton fx:id="radioButtonSecond" layoutX="89.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleToggleButton" prefHeight="21.0" prefWidth="168.0" text="By Desc" />
+            <RadioButton fx:id="radioButtonFirst" layoutX="89.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleToggleButton" prefHeight="21.0" prefWidth="140.0" text="N/A" />
+         </children>
+      </Pane>
+      <Button fx:id="raportButton" layoutX="200.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleRaport" prefHeight="34.0" prefWidth="146.0" text="Generare Rapoarte" />
+      <ComboBox fx:id="PBox" layoutX="133.0" layoutY="108.0" prefHeight="31.0" prefWidth="177.0" />
+      <ComboBox fx:id="SBox" layoutX="133.0" layoutY="58.0" prefHeight="31.0" prefWidth="177.0" />
+   </children>
+</AnchorPane>
