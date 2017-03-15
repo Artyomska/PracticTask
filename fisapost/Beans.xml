@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+ <bean id="postService" class="fisapost.service.PostService">
+ 		   	<constructor-arg ref="postXMLRepo"/>
+ </bean>
+ 
+ <bean id="sarcinaService" class="fisapost.service.SarcinaService">
+ 		   	<constructor-arg ref="sarcinaXMLRepo"/>
+ </bean>
+ 
+ <bean id="fisaService" class="fisapost.service.FisaService">
+ 	   	<constructor-arg ref="efXMLRepo"/>
+ </bean>
+ 
+ 
+	 <bean id="postXMLRepo" class="fisapost.repo.PostXMLRepo">
+	   	<constructor-arg ref="validatorPost"/>
+	    <constructor-arg value="PostXMLRepo.xml"/>
+	 </bean>
+	 
+	 <bean id="sarcinaXMLRepo" class="fisapost.repo.SarcinaXMLRepo">
+	    <constructor-arg ref="validatorSarcina"/>
+	    <constructor-arg value="SarcinaXMLRepo.xml"/>
+	 </bean>
+	 
+	 <bean id="efXMLRepo" class="fisapost.repo.EFXMLRepo">
+	    <constructor-arg ref="validatorEF"/>
+	    <constructor-arg value="EFXMLRepo.xml"/>
+	    <constructor-arg ref="postService"/>
+	    <constructor-arg ref="sarcinaService"/>
+	 </bean>
+	 	 
+		 <bean id="validatorPost" class="fisapost.validator.ValidatorPost"/>
+		 <bean id="validatorSarcina" class="fisapost.validator.ValidatorSarcina"/>
+		 <bean id="validatorEF" class="fisapost.validator.ValidatorEF"/>
+</beans>
