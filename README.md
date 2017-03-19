@@ -11,5 +11,6 @@ The program contains the following things:
 
 The program was made in Java, it uses OOP principles, it has a caching mechansim (made using the Spring Framework), a XML configuration file (using bean's), and the elements are taken from xml files.
 
+The next pic shows the winow that will be shown after a succesful login, for a user that has the ALL permission or both of the READ and WRITE ones
 
 ![The winow that will be shown after a succesful login, for a user that has the ALL permission or both of the READ and WRITE ones](https://i.imgur.com/smZmxFP.png)
