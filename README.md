@@ -10,3 +10,6 @@ The program contains the following things:
 -PDF generation: Clicking a button, the user can generate a pdf containing the elements from the File(Fisa, in the code) section. He can choose how many elements the pdf contains. If the number is lower than the number of the total elements in the File, a sorting alghoritm will take the ones than contains only the most commonly used Tasks, in descending order.
 
 The program was made in Java, it uses OOP principles, it has a caching mechansim (made using the Spring Framework), a XML configuration file (using bean's), and the elements are taken from xml files.
+
+
+![The winow that will be shown after a succesful login, for a user that has the ALL permission or both of the READ and WRITE ones](https://i.imgur.com/smZmxFP.png)
