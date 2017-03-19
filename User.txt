@@ -1,0 +1,4 @@
+Alex|qwerty|READ
+John|12345|READ
+admin|admin|ALL
+andrei|arecibo|WRITE
